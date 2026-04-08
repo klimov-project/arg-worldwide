@@ -1,4 +1,6 @@
 {
+    "buildCommand": "cd frontend && npm install && npm run build && cd ../backend && npm install && npm run build",
+    "devCommand": "cd frontend && npm install && npm run dev",
     "experimentalServices": {
         "frontend": {
             "entrypoint": "frontend",
@@ -7,7 +9,11 @@
         },
         "backend": {
             "entrypoint": "backend",
-            "routePrefix": "/_/backend"
+            "routePrefix": "/api"
         }
+    },
+    "env": {
+        "NODE_ENV": "production",
+        "FRONTEND_URL": "https://arg-worldwide.vercel.app"
     }
 }
